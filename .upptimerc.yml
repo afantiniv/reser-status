@@ -1,0 +1,49 @@
+owner: afantiniv
+repo: reser-status
+
+sites:
+  - name: Reser Landing
+    url: https://reser.app
+  - name: Reser App
+    url: https://reser.app/login
+  - name: Reser API
+    url: https://reser.app/api/health
+  - name: Reser Booking Demo
+    url: https://reser.app/demo-spa
+
+status-website:
+  cname: status.reser.app
+  name: Reser Status
+  theme: light
+  introTitle: "Estado de **Reser**"
+  introMessage: "Monitoreo en tiempo real de la plataforma Reser. Actualizado cada 5 minutos."
+  navbar:
+    - title: Reser
+      href: https://reser.app
+    - title: Soporte
+      href: mailto:hola@reser.app
+
+workflowSchedule:
+  uptime: "*/5 * * * *"
+  graphs: "0 0 * * *"
+  response-time: "0 23 * * *"
+  update-template: "0 0 * * *"
+  summary: "0 0 * * *"
+
+i18n:
+  activeIncidents: "Incidentes activos"
+  allSystemsOperational: "Todos los sistemas operando con normalidad"
+  incidentReport: "Reporte de incidentes"
+  activeIncidentSummary: "$NUMBER servicio(s) con problemas"
+  overallUptime: "Uptime general"
+  overallResponseTime: "Tiempo de respuesta"
+  liveStatus: "Estado en vivo"
+  pastIncidents: "Historial de incidentes"
+  responseTime: "Tiempo de respuesta"
+  uptime: "Uptime"
+  url: "URL"
+  status: "Estado"
+  history: "Historial"
+  up: "Operativo"
+  degraded: "Degradado"
+  down: "Caído"
