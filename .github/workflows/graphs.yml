@@ -1,13 +1,24 @@
+# 🔼 Upptime @v1.41.3 — generated from .upptimerc.yml
 name: Graphs CI
 on:
   schedule:
     - cron: "0 0 * * *"
+  repository_dispatch:
+    types: [graphs]
   workflow_dispatch:
 jobs:
-  graphs:
+  release:
+    name: Generate graphs
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: upptime/graphs@v1.1.0
+      - name: Checkout
+        uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
+          ref: ${{ github.head_ref }}
+          token: ${{ secrets.GH_PAT || github.token }}
+      - name: Generate graphs
+        uses: upptime/uptime-monitor@v1.41.3
+        with:
+          command: "graphs"
+        env:
+          GH_PAT: ${{ secrets.GH_PAT || github.token }}
