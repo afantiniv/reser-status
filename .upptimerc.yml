@@ -9,7 +9,7 @@ sites:
   - name: Reser API
     url: https://reser.app/api/health
   - name: Reser Booking Demo
-    url: https://reser.app/demo-spa
+    url: https://reser.app/demo
 
 status-website:
   cname: status.reser.app
