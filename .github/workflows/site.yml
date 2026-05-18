@@ -7,7 +7,7 @@ on:
     types: [static_site]
   workflow_dispatch:
   push:
-    branches: [main]
+    branches: [master]
 jobs:
   release:
     name: Build and deploy site
